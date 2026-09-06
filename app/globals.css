@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+/* Import design tokens */
+@import "../design-system/styles/design-tokens.css";
+
+/* Use design token variables */
+@theme inline {
+  /* Colors */
+  --color-background: var(--color-bg-primary);
+  --color-foreground: var(--color-text-primary);
+
+  /* Background colors */
+  --color-bg-primary: var(--color-bg-primary);
+  --color-bg-subtle: var(--color-bg-subtle);
+  --color-bg-surface: var(--color-bg-surface);
+  --color-bg-surface-elevated: var(--color-bg-surface-elevated);
+  --color-bg-inverse: var(--color-bg-inverse);
+  
+  /* Brand colors (replaceable) */
+  --color-brand-primary: var(--color-brand-primary);
+  --color-brand-hover: var(--color-brand-hover);
+  --color-brand-active: var(--color-brand-active);
+  --color-brand-subtle: var(--color-brand-subtle);
+  
+  /* Text colors */
+  --color-text-primary: var(--color-text-primary);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-text-muted: var(--color-text-muted);
+  --color-text-inverse: var(--color-text-inverse);
+  --color-text-inverse-accent: var(--color-text-inverse-accent);
+  --color-text-inverse-muted: var(--color-text-inverse-muted);
+  
+  /* Border colors */
+  --color-border: var(--color-border-default);
+  --color-border-strong: var(--color-border-strong);
+  --color-border-subtle: var(--color-border-subtle);
+  
+  /* Functional colors */
+  --color-success: var(--color-functional-success);
+  --color-warning: var(--color-functional-warning);
+  --color-error: var(--color-functional-error);
+  --color-info: var(--color-functional-info);
+  
+  /* Fonts */
+  --font-sans: var(--font-geist-sans), var(--font-family-sans);
+  --font-mono: var(--font-geist-mono), var(--font-family-mono);
+  
+  /* Spacing scale (based on DESIGN.md) */
+  --spacing-1: 0.25rem;  /* 4px */
+  --spacing-2: 0.5rem;   /* 8px */
+  --spacing-3: 0.75rem;  /* 12px */
+  --spacing-4: 1rem;     /* 16px */
+  --spacing-5: 1.25rem;  /* 20px */
+  --spacing-6: 1.5rem;   /* 24px */
+  --spacing-8: 2rem;     /* 32px */
+  --spacing-10: 2.5rem;  /* 40px */
+  --spacing-12: 3rem;    /* 48px */
+  --spacing-16: 4rem;    /* 64px */
+  --spacing-20: 5rem;    /* 80px */
+  --spacing-24: 6rem;    /* 96px */
+  --spacing-30: 7.5rem;  /* 120px */
+  --spacing-36: 9rem;    /* 144px */
+  
+  /* Border radius */
+  --radius-xs: 0.125rem;  /* 2px */
+  --radius-sm: 0.25rem;   /* 4px */
+  --radius-md: 0.375rem;  /* 6px */
+  --radius-lg: 0.5rem;    /* 8px */
+  --radius-xl: 0.75rem;   /* 12px */
+  --radius-2xl: 1rem;     /* 16px */
+  --radius-3xl: 1.5rem;   /* 24px */
+  --radius-full: 9999px;
+  
+  /* Container widths */
+  --container-xs: 20rem;   /* 320px */
+  --container-sm: 24rem;   /* 384px */
+  --container-md: 28rem;   /* 448px */
+  --container-lg: 32rem;   /* 512px */
+  --container-xl: 36rem;   /* 576px */
+  --container-2xl: 42rem;  /* 672px */
+  --container-3xl: 48rem;  /* 768px */
+  --container-4xl: 56rem;  /* 896px */
+  --container-5xl: 64rem;  /* 1024px */
+  --container-6xl: 72rem;  /* 1152px */
+  --container-7xl: 80rem;  /* 1280px */
+  
+  /* Animation timing */
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base body styles using design tokens */
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-sans);
+  line-height: 1.75; /* body line height from typography tokens */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Focus styles for all interactive elements */
+*:focus-visible {
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
+  outline-offset: var(--focus-ring-offset);
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

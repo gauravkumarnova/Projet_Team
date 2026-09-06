@@ -1,0 +1,228 @@
+/**
+ * Typography Utilities
+ * 
+ * Reusable typography classes based on design tokens.
+ * Uses fluid typography with clamp() for responsive scaling.
+ */
+
+/* Display styles */
+.display-xl {
+  font-size: clamp(3.5rem, 5vw + 1rem, 4.5rem);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.display {
+  font-size: clamp(3rem, 4vw + 1rem, 4rem);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+/* Heading styles */
+.h1 {
+  font-size: clamp(2.375rem, 3vw + 1rem, 3rem);
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.h2 {
+  font-size: clamp(1.875rem, 2.5vw + 1rem, 2.25rem);
+  line-height: 1.3;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.h3 {
+  font-size: clamp(1.375rem, 2vw + 1rem, 1.75rem);
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.h4 {
+  font-size: clamp(1.125rem, 1.5vw + 1rem, 1.5rem);
+  line-height: 1.5;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+/* Body text styles */
+.body-large {
+  font-size: clamp(1.125rem, 1vw + 1rem, 1.25rem);
+  line-height: 1.75;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.body {
+  font-size: clamp(1rem, 0.5vw + 1rem, 1.125rem);
+  line-height: 1.75;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.body-small {
+  font-size: clamp(0.875rem, 0.25vw + 1rem, 1rem);
+  line-height: 1.6;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+/* Utility text styles */
+.caption {
+  font-size: clamp(0.75rem, 0.25vw + 1rem, 0.875rem);
+  line-height: 1.4;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+}
+
+.label {
+  font-size: clamp(0.75rem, 0.25vw + 1rem, 0.875rem);
+  line-height: 1.4;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+}
+
+/* Text color utilities */
+.text-primary {
+  color: var(--color-text-primary);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.text-inverse {
+  color: var(--color-text-inverse);
+}
+
+.text-on-brand {
+  color: var(--color-text-on-brand);
+}
+
+/* Text alignment */
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Font weight utilities */
+.font-light {
+  font-weight: 300;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+/* Line height utilities */
+.leading-tight {
+  line-height: 1.1;
+}
+
+.leading-snug {
+  line-height: 1.25;
+}
+
+.leading-normal {
+  line-height: 1.5;
+}
+
+.leading-relaxed {
+  line-height: 1.75;
+}
+
+.leading-loose {
+  line-height: 2;
+}
+
+/* Letter spacing utilities */
+.tracking-tighter {
+  letter-spacing: -0.05em;
+}
+
+.tracking-tight {
+  letter-spacing: -0.025em;
+}
+
+.tracking-normal {
+  letter-spacing: 0;
+}
+
+.tracking-wide {
+  letter-spacing: 0.025em;
+}
+
+.tracking-wider {
+  letter-spacing: 0.05em;
+}
+
+/* Maximum line length for readability */
+.max-line-length {
+  max-width: 65ch;
+}
+
+/* Responsive typography container */
+.typography-container {
+  max-width: 80rem; /* 1280px */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .typography-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Readable line length for body copy */
+.readable-line-length {
+  max-width: 75ch;
+}
+
+/* Ensure headings don't overflow on mobile */
+.heading-break {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* No overflow on mobile */
+.no-mobile-overflow {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
