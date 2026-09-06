@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Contact form</title>
+  </head>
+  <body>
+    <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact">
+      <label>Do not fill this field if you are human: <input name="bot-field" type="text"></label>
+      <input name="name" type="text">
+      <input name="email" type="email">
+      <input name="company" type="text">
+      <input name="country" type="text">
+      <select name="service">
+        <option value="">Select a service</option>
+        <option value="Cloud &amp; DevOps Engineering">Cloud &amp; DevOps Engineering</option>
+        <option value="Managed Cloud &amp; Infrastructure">Managed Cloud &amp; Infrastructure</option>
+        <option value="Cloud Migration &amp; Modernisation">Cloud Migration &amp; Modernisation</option>
+        <option value="Fractional / Dedicated Technology Team">Fractional / Dedicated Technology Team</option>
+        <option value="Software Engineering">Software Engineering</option>
+        <option value="Backup &amp; Disaster Recovery">Backup &amp; Disaster Recovery</option>
+        <option value="Streaming Infrastructure">Streaming Infrastructure</option>
+        <option value="Not Sure / Need Guidance">Not Sure / Need Guidance</option>
+      </select>
+      <textarea name="description"></textarea>
+    </form>
+  </body>
+</html>

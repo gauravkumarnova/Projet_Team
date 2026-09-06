@@ -1,5 +1,3 @@
-'use server';
-
 const serviceOptions = new Set([
   'Cloud & DevOps Engineering',
   'Managed Cloud & Infrastructure',
@@ -39,10 +37,7 @@ function isSpamSubmission(formData: FormData) {
   return stringValue(formData, 'bot-field').length > 0;
 }
 
-export async function submitContactForm(
-  _previousState: ContactFormState,
-  formData: FormData,
-): Promise<ContactFormState> {
+export function validateContactForm(formData: FormData): ContactFormState {
   const values = getValues(formData);
   const fieldErrors: Record<string, string> = {};
 

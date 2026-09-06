@@ -1,7 +1,7 @@
 'use client';
 
-import { useRef, useState, type FormEvent } from 'react';
-import { submitContactForm, type ContactFormState } from '../../app/contact/actions';
+import { useState, type FormEvent } from 'react';
+import { validateContactForm, type ContactFormState } from '../../app/contact/actions';
 
 const initialContactFormState: ContactFormState = {
   success: false,
@@ -35,27 +35,36 @@ function FieldError({ id, message }: { id: string; message?: string }) {
 export function ContactForm() {
   const [state, setState] = useState(initialContactFormState);
   const [isPending, setIsPending] = useState(false);
-  const allowNativeSubmit = useRef(false);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    if (allowNativeSubmit.current) {
-      allowNativeSubmit.current = false;
-      return;
-    }
-
     event.preventDefault();
     setIsPending(true);
 
     try {
-      const nextState = await submitContactForm(state, new FormData(event.currentTarget));
-      setState(nextState);
+      const formData = new FormData(event.currentTarget);
+      const nextState = validateContactForm(formData);
 
-      if (nextState.validated) {
-        allowNativeSubmit.current = true;
-        event.currentTarget.requestSubmit();
-      } else {
+      if (!nextState.validated) {
+        setState(nextState);
         setIsPending(false);
+        return;
       }
+
+      const encodedFormData = new URLSearchParams();
+      formData.forEach((value, key) => {
+        if (typeof value === 'string') encodedFormData.append(key, value);
+      });
+
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encodedFormData.toString(),
+      });
+
+      if (!response.ok) throw new Error('Netlify form submission failed');
+
+      setState({ ...nextState, success: true });
+      setIsPending(false);
     } catch {
       setState({
         ...state,
