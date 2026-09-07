@@ -127,7 +127,7 @@ export default function ExperiencePage() {
     <>
       <Section spacing="none" padding="sm">
         <Container>
-          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Experience' }]} />
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Experience', href: '/experience/' }]} />
         </Container>
       </Section>
 

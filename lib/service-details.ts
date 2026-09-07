@@ -1,6 +1,7 @@
 import type { ServiceDetailConfig } from '../components/marketing/ServiceDetailPage';
 
 export const cloudDevops: ServiceDetailConfig = {
+  path: '/services/cloud-devops/',
   eyebrow: 'Cloud & DevOps Engineering',
   title: 'Make infrastructure and deployments easier to operate, repeat and scale.',
   description: 'We help teams improve AWS infrastructure, deployment pipelines, automation, containers and monitoring so engineering environments are less dependent on manual processes and individual knowledge.',
@@ -71,6 +72,7 @@ export const cloudDevops: ServiceDetailConfig = {
 };
 
 export const managedCloud: ServiceDetailConfig = {
+  path: '/services/managed-cloud-infrastructure/',
   eyebrow: 'Managed Cloud & Infrastructure',
   title: 'Keep critical infrastructure managed after deployment.',
   description: 'We provide ongoing technical ownership for cloud and server environments through monitoring, maintenance, troubleshooting, backup operations and infrastructure support.',
@@ -115,6 +117,7 @@ export const managedCloud: ServiceDetailConfig = {
 };
 
 export const cloudMigration: ServiceDetailConfig = {
+  path: '/services/cloud-migration-modernisation/',
   eyebrow: 'Cloud Migration & Modernisation',
   title: 'Modernise infrastructure without losing sight of operations.',
   description: 'We help businesses assess existing environments, design a practical target architecture and move toward cloud infrastructure, automation and monitoring that are easier to operate.',
@@ -157,6 +160,7 @@ export const cloudMigration: ServiceDetailConfig = {
 };
 
 export const fractionalTeam: ServiceDetailConfig = {
+  path: '/services/fractional-technology-team/',
   eyebrow: 'Fractional / Dedicated Technology Team',
   title: 'Add technical capability without building every specialist role in-house.',
   description: 'We support startups, SaaS businesses, agencies and growing companies that need dependable cloud, DevOps, infrastructure or engineering capacity alongside their existing team.',
@@ -187,6 +191,7 @@ export const fractionalTeam: ServiceDetailConfig = {
 };
 
 export const softwareEngineering: ServiceDetailConfig = {
+  path: '/services/software-engineering/',
   eyebrow: 'Software Engineering',
   title: 'Build software around the way your business actually works.',
   description: 'We develop business applications, portals, backend systems, APIs and Android solutions—and can also support the cloud infrastructure, deployment and ongoing operations behind them.',
@@ -219,6 +224,7 @@ export const softwareEngineering: ServiceDetailConfig = {
 };
 
 export const backupRecovery: ServiceDetailConfig = {
+  path: '/services/backup-disaster-recovery/',
   eyebrow: 'Backup & Disaster Recovery',
   title: 'A backup is only useful when recovery works.',
   description: 'We help businesses review backup readiness, improve recovery procedures and reduce uncertainty around restoring important systems and data after an incident.',
@@ -248,6 +254,7 @@ export const backupRecovery: ServiceDetailConfig = {
 };
 
 export const streamingInfrastructure: ServiceDetailConfig = {
+  path: '/services/streaming-infrastructure/',
   eyebrow: 'Streaming Infrastructure',
   title: 'Infrastructure support for live and streaming environments where reliability matters.',
   description: 'We bring specialist experience across live technical operations, streaming protocols, encoding/decoding, infrastructure monitoring and operational troubleshooting.',

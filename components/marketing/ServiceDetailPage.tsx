@@ -15,6 +15,7 @@ export interface ServiceCapability {
 
 export interface ServiceDetailConfig {
   eyebrow: string;
+  path: string;
   title: string;
   description: string;
   primaryAction: { label: string; href: string };
@@ -114,7 +115,7 @@ export function ServiceDetailPage({ config }: { config: ServiceDetailConfig }) {
     <>
       <Section spacing="none" padding="sm">
         <Container>
-          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services/' }, { label: config.eyebrow }]} />
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services/' }, { label: config.eyebrow, href: config.path }]} />
         </Container>
       </Section>
 

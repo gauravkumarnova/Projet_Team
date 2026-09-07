@@ -13,7 +13,7 @@ export default function TermsPage() {
     <>
       <Section spacing="none" padding="sm">
         <Container>
-          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Website Terms' }]} />
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Website Terms', href: '/terms/' }]} />
         </Container>
       </Section>
 

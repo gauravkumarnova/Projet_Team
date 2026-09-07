@@ -70,7 +70,7 @@ export default function AboutPage() {
     <>
       <Section spacing="none" padding="sm">
         <Container>
-          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'About' }]} />
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'About', href: '/about/' }]} />
         </Container>
       </Section>
 

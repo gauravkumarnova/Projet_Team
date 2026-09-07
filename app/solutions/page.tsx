@@ -30,7 +30,7 @@ export default function SolutionsOverviewPage() {
     <>
       <Section spacing="none" padding="sm">
         <Container>
-          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Solutions' }]} />
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Solutions', href: '/solutions/' }]} />
         </Container>
       </Section>
 

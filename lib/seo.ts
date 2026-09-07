@@ -10,6 +10,8 @@ export function createPageMetadata(title: string, description: string, path?: st
     description,
     openGraph: {
       type: 'website',
+      siteName,
+      ...(path ? { url: path === '/' ? siteUrl + '/' : new URL(path, siteUrl).toString() } : {}),
       title,
       description,
     },
@@ -37,6 +39,29 @@ export const websiteStructuredData = {
   description: 'We build, deploy, manage and support business-critical applications and cloud infrastructure.',
   inLanguage: 'en',
 };
+
+export const indexablePaths = [
+  '/',
+  '/services/',
+  '/services/cloud-devops/',
+  '/services/managed-cloud-infrastructure/',
+  '/services/cloud-migration-modernisation/',
+  '/services/fractional-technology-team/',
+  '/services/software-engineering/',
+  '/services/backup-disaster-recovery/',
+  '/services/streaming-infrastructure/',
+  '/solutions/',
+  '/solutions/startups-saas/',
+  '/solutions/smes-growing-businesses/',
+  '/solutions/agencies/',
+  '/solutions/media-streaming/',
+  '/experience/',
+  '/about/',
+  '/insights/',
+  '/contact/',
+  '/privacy/',
+  '/terms/',
+] as const;
 
 export const organizationStructuredData = {
   '@context': 'https://schema.org',

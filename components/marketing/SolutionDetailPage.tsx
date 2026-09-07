@@ -7,6 +7,7 @@ import { Section } from '../layout/Section';
 
 export interface SolutionDetailConfig {
   eyebrow: string;
+  path: string;
   title: string;
   heroDescription: string;
   introParagraphs: string[];
@@ -39,7 +40,7 @@ export function SolutionDetailPage({ config }: { config: SolutionDetailConfig })
     <>
       <Section spacing="none" padding="sm">
         <Container>
-          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Solutions', href: '/solutions/' }, { label: config.eyebrow }]} />
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Solutions', href: '/solutions/' }, { label: config.eyebrow, href: config.path }]} />
         </Container>
       </Section>
 

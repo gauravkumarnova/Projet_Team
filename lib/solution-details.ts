@@ -24,6 +24,7 @@ export const solutionAudiences = [
 ];
 
 export const startupsSaas: SolutionDetailConfig = {
+  path: '/solutions/startups-saas/',
   eyebrow: 'Startups & SaaS',
   title: 'Cloud and DevOps capability without slowing down product development.',
   heroDescription: 'Growing product teams often reach a point where developers are also managing infrastructure, deployments, monitoring and production incidents.',
@@ -44,6 +45,7 @@ export const startupsSaas: SolutionDetailConfig = {
 };
 
 export const smesGrowingBusinesses: SolutionDetailConfig = {
+  path: '/solutions/smes-growing-businesses/',
   eyebrow: 'SMEs & Growing Businesses',
   title: 'Modern technology support for businesses outgrowing legacy processes and infrastructure.',
   heroDescription: 'Growth often exposes technical problems that were manageable at a smaller scale: manual processes, aging systems, fragmented infrastructure and unclear technical ownership.',
@@ -64,6 +66,7 @@ export const smesGrowingBusinesses: SolutionDetailConfig = {
 };
 
 export const agencies: SolutionDetailConfig = {
+  path: '/solutions/agencies/',
   eyebrow: 'Agencies',
   title: 'Extend your technical delivery capability without building every skill in-house.',
   heroDescription: 'Agencies often encounter client requirements outside their core delivery capacity—cloud infrastructure, DevOps, backend engineering, deployment or ongoing technical operations.',
@@ -87,6 +90,7 @@ export const agencies: SolutionDetailConfig = {
 };
 
 export const mediaStreaming: SolutionDetailConfig = {
+  path: '/solutions/media-streaming/',
   eyebrow: 'Media & Streaming Businesses',
   title: 'Technical infrastructure support for live and streaming operations.',
   heroDescription: 'Live and streaming environments require more than application development. Reliability depends on infrastructure, protocols, encoding, monitoring, redundancy and disciplined technical operations.',

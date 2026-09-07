@@ -2444,3 +2444,24 @@ Do not equate “pages render” with “project complete”.
 The target is:
 
 **a credible, maintainable, accessible, responsive, production-ready B2B technology website built with controlled AI usage and minimal unnecessary complexity.**
+
+---
+
+## Post-launch Search & AI Readiness
+
+Search-readiness foundation completed without changing approved business content or visual design.
+
+Completed:
+- Native app/robots.ts with Googlebot, Bingbot and OAI-SearchBot access.
+- Native app/sitemap.ts for current public indexable routes.
+- Existing canonical and metadata architecture retained and improved with accurate Open Graph URLs.
+- Reusable breadcrumb JSON-LD for visible breadcrumb trails.
+- Search-readiness documentation at docs/SEARCH-AI-READINESS.md.
+
+Not completed:
+- Google Search Console verification or sitemap submission.
+- Bing Webmaster Tools verification or sitemap submission.
+- IndexNow integration or submission.
+- Live HTTPS, indexing, crawl, or AI-search performance verification.
+
+These items require owner access or live production state and must not be marked complete until verified.

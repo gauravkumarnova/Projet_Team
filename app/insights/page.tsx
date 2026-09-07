@@ -38,7 +38,7 @@ export default function InsightsPage() {
     <>
       <Section spacing="none" padding="sm">
         <Container>
-          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Insights' }]} />
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Insights', href: '/insights/' }]} />
         </Container>
       </Section>
 
