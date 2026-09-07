@@ -12,14 +12,6 @@ interface ProcessTimelineProps {
   className?: string;
 }
 
-/**
- * ProcessTimeline Component
- * 
- * Process visualization for Assess → Design → Build/Fix → Deploy → Monitor → Manage → Support
- * Based on DESIGN.md process component design.
- * 
- * IMPORTANT: Desktop: horizontal/staggered timeline, Mobile: vertical sequence
- */
 export function ProcessTimeline({
   eyebrow,
   title,
@@ -29,11 +21,10 @@ export function ProcessTimeline({
 }: ProcessTimelineProps) {
   return (
     <div className={className}>
-      {/* Header */}
-      <div className="mb-12 text-center">
+      <div className="mb-16 text-center">
         {eyebrow && (
           <div className="mb-4">
-            <span className="inline-block px-3 py-1.5 bg-brand-subtle text-brand-primary rounded-full text-sm font-medium tracking-wide uppercase">
+            <span className="inline-block rounded-full bg-brand-subtle px-3 py-1.5 text-sm font-medium uppercase tracking-wide text-brand-primary">
               {eyebrow}
             </span>
           </div>
@@ -44,37 +35,30 @@ export function ProcessTimeline({
         </h2>
 
         {description && (
-          <p className="body-large mx-auto mb-0 text-text-secondary readable-line-length max-w-3xl">
+          <p className="body-large mx-auto mb-0 max-w-3xl text-text-secondary readable-line-length">
             {description}
           </p>
         )}
       </div>
 
-      {/* Desktop Timeline */}
       <div className="hidden xl:block">
         <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-border-default -translate-y-1/2 z-0" />
-          
-          <div className="relative flex justify-between z-10">
-            {steps.map((step, index) => (
-              <div
-                key={index}
-                className={`flex flex-col items-center text-center max-w-xs ${index % 2 === 0 ? 'mt-0' : '-mt-16'}`}
-              >
-                {/* Step number bubble */}
-                <div className="w-12 h-12 rounded-full bg-bg-inverse flex items-center justify-center mb-4">
-                  <span className="text-text-inverse font-bold text-lg">
+          <div className="absolute left-0 right-0 top-6 z-0 h-0.5 -translate-y-1/2 bg-border-default" />
+
+          <div className="relative z-10 flex gap-3">
+            {steps.map((step) => (
+              <div key={step.number} className="flex min-w-0 flex-1 flex-col items-center text-center">
+                <div className="mb-4 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-bg-inverse">
+                  <span className="text-lg font-bold text-text-inverse">
                     {step.number}
                   </span>
                 </div>
 
-                {/* Step content */}
-                <div className="bg-bg-surface border border-border-default rounded-lg p-5 shadow-sm">
+                <div className="flex h-full min-h-[178px] w-full flex-col rounded-lg border border-border-default bg-bg-surface p-4 shadow-sm">
                   <h3 className="h4 mb-2 text-text-primary">
                     {step.title}
                   </h3>
-                  
+
                   <p className="body-small text-text-secondary">
                     {step.description}
                   </p>
@@ -85,31 +69,46 @@ export function ProcessTimeline({
         </div>
       </div>
 
-      {/* Mobile/Tablet Vertical Timeline */}
-      <div className="xl:hidden">
+      <div className="hidden grid-cols-2 gap-5 md:grid xl:hidden">
+        {steps.map((step) => (
+          <div key={step.number} className="flex min-w-0 items-start gap-4 rounded-lg border border-border-default bg-bg-surface p-5">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-bg-inverse">
+              <span className="text-sm font-bold text-text-inverse">
+                {step.number}
+              </span>
+            </div>
+
+            <div>
+              <h3 className="h4 mb-2 text-text-primary">
+                {step.title}
+              </h3>
+
+              <p className="body-small text-text-secondary">
+                {step.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="md:hidden">
         <div className="relative pl-8">
-          {/* Vertical line */}
-          <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-border-default" />
-          
+          <div className="absolute bottom-0 left-4 top-0 w-0.5 bg-border-default" />
+
           <div className="space-y-8">
-            {steps.map((step, index) => (
-              <div
-                key={index}
-                className="relative"
-              >
-                {/* Step number bubble */}
-                <div className="absolute -left-8 w-8 h-8 rounded-full bg-bg-inverse border-4 border-bg-primary flex items-center justify-center">
-                  <span className="text-text-inverse font-bold text-sm">
+            {steps.map((step) => (
+              <div key={step.number} className="relative">
+                <div className="absolute -left-8 flex h-8 w-8 items-center justify-center rounded-full border-4 border-bg-primary bg-bg-inverse">
+                  <span className="text-sm font-bold text-text-inverse">
                     {step.number}
                   </span>
                 </div>
 
-                {/* Step content */}
-                <div className="bg-bg-surface border border-border-default rounded-lg p-5">
+                <div className="rounded-lg border border-border-default bg-bg-surface p-5">
                   <h3 className="h4 mb-2 text-text-primary">
                     {step.title}
                   </h3>
-                  
+
                   <p className="body-small text-text-secondary">
                     {step.description}
                   </p>
