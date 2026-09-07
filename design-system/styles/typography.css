@@ -217,7 +217,8 @@
 .heading-break {
   word-wrap: break-word;
   overflow-wrap: break-word;
-  hyphens: auto;
+  word-break: normal;
+  hyphens: none;
 }
 
 /* No overflow on mobile */

@@ -114,7 +114,7 @@ export function Header({ className = '' }: HeaderProps) {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden min-w-0 flex-1 items-center justify-center space-x-3 lg:flex xl:space-x-8" aria-label="Main navigation">
+          <nav className="hidden min-w-0 flex-1 items-center justify-center space-x-3 xl:flex xl:space-x-8" aria-label="Main navigation">
             {navItems.map((item) => (
               <div key={item.label} className="relative">
                 {item.hasDropdown ? (
@@ -167,7 +167,7 @@ export function Header({ className = '' }: HeaderProps) {
           </nav>
 
           {/* Desktop CTA */}
-          <div className="hidden shrink-0 lg:block">
+          <div className="hidden shrink-0 xl:block">
             <PrimaryButton as="link" href="/contact/" size="md">
               Book a Technical Consultation
             </PrimaryButton>

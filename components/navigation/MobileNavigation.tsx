@@ -144,7 +144,7 @@ export function MobileNavigation({ className = '' }: MobileNavigationProps) {
       <button
         ref={triggerRef}
         onClick={toggleMenu}
-        className="lg:hidden flex items-center justify-center w-10 h-10 text-text-primary hover:text-brand-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-state-focus focus-visible:ring-offset-2 rounded"
+        className="xl:hidden flex items-center justify-center w-10 h-10 text-text-primary hover:text-brand-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-state-focus focus-visible:ring-offset-2 rounded"
         aria-label={isOpen ? 'Close mobile menu' : 'Open mobile menu'}
         aria-expanded={isOpen}
         aria-controls="mobile-menu"
@@ -184,7 +184,7 @@ export function MobileNavigation({ className = '' }: MobileNavigationProps) {
           inset-0
           top-16
           md:top-20
-          lg:hidden
+          xl:hidden
           bg-bg-primary
           z-modal
           transform
@@ -339,7 +339,7 @@ export function MobileNavigation({ className = '' }: MobileNavigationProps) {
       {/* Backdrop */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-overlay lg:hidden"
+          className="fixed inset-0 bg-black bg-opacity-50 z-overlay xl:hidden"
           onClick={closeMenu}
           aria-hidden="true"
         />
