@@ -84,7 +84,7 @@ export function Hero({
             </h1>
 
             {description && (
-              <p className="body-large mb-8 text-text-secondary readable-line-length">
+              <p className="hero-description body-large mb-8 text-text-secondary readable-line-length">
                 {description}
               </p>
             )}

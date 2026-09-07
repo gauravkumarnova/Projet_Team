@@ -3,6 +3,13 @@
 /* Import design tokens */
 @import "../design-system/styles/design-tokens.css";
 
+.hero-description {
+  max-width: 62ch;
+  hyphens: none;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
 /* Use design token variables */
 @theme inline {
   /* Colors */
@@ -26,6 +33,7 @@
   --color-text-primary: var(--color-text-primary);
   --color-text-secondary: var(--color-text-secondary);
   --color-text-muted: var(--color-text-muted);
+  --color-text-on-brand: var(--color-text-on-brand);
   --color-text-inverse: var(--color-text-inverse);
   --color-text-inverse-accent: var(--color-text-inverse-accent);
   --color-text-inverse-muted: var(--color-text-inverse-muted);
